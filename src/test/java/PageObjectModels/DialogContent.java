@@ -21,4 +21,43 @@ public class DialogContent {
 
     @FindBy(xpath = "//*[text()=' Dashboard ']")
     public WebElement homeConfirmText;
+
+    @FindBy(css = "ms-add-button")
+    public WebElement addBtn;
+
+    @FindBy(css = "ms-edit-button")
+    public WebElement editBtn;
+
+    @FindBy(css = "ms-delete-button")
+    public WebElement deleteBtn;
+
+    @FindBy(css = "mat-dialog-actions button[type='submit']")
+    public WebElement actionDeleteBtn;
+
+    @FindBy(css = "ms-search-button")
+    public WebElement searchBtn;
+
+    @FindBy(css = "ms-save-button")
+    public WebElement saveBtn;
+
+    @FindBy(css = "ms-dialog-content input[data-placeholder='Name']")
+    public WebElement nameInput;
+
+    @FindBy(css = "ms-dialog-content input[data-placeholder='Code']")
+    public WebElement codeInput;
+
+    @FindBy(css = "input[data-placeholder='Name']")
+    public WebElement searchNameInput;
+
+    @FindBy(css = "input[data-placeholder='Code']")
+    public WebElement searchCodeInput;
+
+    @FindBy(xpath="//div[contains(text(),'successfully')]")
+    public WebElement successMsg;
+
+    @FindBy(xpath ="//ms-text-field[@formcontrolname='shortName']//input" )
+    public WebElement ShortName;
+
+    @FindBy(xpath="//div[contains(text(),'already exists')]")
+    public WebElement alreadyExistMsg;
 }
