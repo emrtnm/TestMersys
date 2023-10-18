@@ -60,4 +60,30 @@ public class DialogContent {
 
     @FindBy(xpath="//div[contains(text(),'already exists')]")
     public WebElement alreadyExistMsg;
+
+
+    public WebElement getWebElement(String strElement){
+
+        switch (strElement){
+
+            case "username" : return this.username;
+            case "password" : return this.password;
+            case "loginButton" : return this.loginButton;
+            case "addBtn" : return this.addBtn;
+            case "editBtn" : return this.editBtn;
+            case "deleteBtn" : return this.deleteBtn;
+            case "actionDeleteBtn" : return this.actionDeleteBtn;
+            case "searchBtn" : return this.searchBtn;
+            case "saveBtn" : return this.saveBtn;
+            case "nameInput" : return this.nameInput;
+            case "codeInput" : return this.codeInput;
+            case "searchNameInput" : return this.searchNameInput;
+            case "searchCodeInput" : return this.searchCodeInput;
+            case "successMsg" : return this.successMsg;
+            case "ShortName" : return this.ShortName;
+            case "alreadyExistMsg" : return this.alreadyExistMsg;
+
+        }
+        return null;
+    }
 }
