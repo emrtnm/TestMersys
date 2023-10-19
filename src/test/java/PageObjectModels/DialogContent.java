@@ -69,6 +69,10 @@ public class DialogContent {
     @FindBy(css = "input[inputmode='numeric']")
     public WebElement school_Capacity;
 
+    @FindBy(css = "input[data-placeholder='Short Name']")
+    public WebElement school_shortName;
+
+
     public WebElement getWebElement(String strElement){
 
         switch (strElement){
@@ -90,7 +94,7 @@ public class DialogContent {
             case "ShortName" : return this.ShortName;
             case "alreadyExistMsg" : return this.alreadyExistMsg;
             case "school_Capacity" : return this.school_Capacity;
-
+            case "school_shortName" : return this.school_shortName;
 
         }
         return null;
