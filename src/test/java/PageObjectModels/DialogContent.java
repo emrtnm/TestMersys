@@ -27,13 +27,16 @@ public class DialogContent {
     @FindBy(css = "ms-add-button")
     public WebElement addBtn;
 
-    @FindBy(css = "ms-edit-button")
-    public WebElement editBtn;
+    @FindBy(xpath = "//ms-edit-button//button")
+    public List<WebElement> editBtn;
 
     @FindBy(css = "ms-delete-button")
     public WebElement deleteBtn;
 
-    @FindBy(css = "mat-dialog-actions button[type='submit']")
+    @FindBy(css = "ms-delete-button")
+    public List<WebElement> deleteBtn_List;
+
+    @FindBy(css = "button[type='submit']")
     public WebElement actionDeleteBtn;
 
     @FindBy(css = "ms-search-button")
@@ -72,7 +75,18 @@ public class DialogContent {
     @FindBy(css = "input[data-placeholder='Short Name']")
     public WebElement school_shortName;
 
+    @FindBy(xpath = "//ms-save-button//button")
+    public WebElement edit_saveButton;
 
+    @FindBy(css = "button[role*='switch'][id*='11']")
+    public WebElement toggle_button;
+
+    @FindBy(css = "tbody[role*='rowgroup'] > tr > td:nth-child(3)")
+    public List<WebElement> department_CodeList;
+
+
+
+    //
     public WebElement getWebElement(String strElement){
 
         switch (strElement){
@@ -81,7 +95,6 @@ public class DialogContent {
             case "password" : return this.password;
             case "loginButton" : return this.loginButton;
             case "addBtn" : return this.addBtn;
-            case "editBtn" : return this.editBtn;
             case "deleteBtn" : return this.deleteBtn;
             case "actionDeleteBtn" : return this.actionDeleteBtn;
             case "searchBtn" : return this.searchBtn;
@@ -95,6 +108,7 @@ public class DialogContent {
             case "alreadyExistMsg" : return this.alreadyExistMsg;
             case "school_Capacity" : return this.school_Capacity;
             case "school_shortName" : return this.school_shortName;
+            case "edit_saveButton" : return this.edit_saveButton;
 
         }
         return null;

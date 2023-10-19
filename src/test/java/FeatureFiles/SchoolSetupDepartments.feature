@@ -21,22 +21,18 @@ Feature: SchoolSetup Functionality 2
     Then Success message should be display
 
     When The admin click on the edit element Dialog
-      | editBtn |
+
     Then The admin user sending new departments information in Dialog
       | nameInput | <e_nameInputInfo> |
       | codeInput | <e_codeInputInfo> |
 
     And Click on the save element in Dialog
-      | saveBtn |
+      | edit_saveButton |
     Then Success message should be display
 
-    And Click on the element in Dialog for deleting
-      | deleteBtn       |
-      | actionDeleteBtn |
+    And Click on the element in Dialog according to code as  "<e_codeInputInfo>" list for deleting
+
     Then Success message should be display
     Examples:
-      | nameInputInfo       | codeInputInfo | e_nameInputInfo                | e_codeInputInfo |
-      | Sport Department    | SD            | Gym Department                 | Gym             |
-      | Musics Department   | MD            | Musics and Sports Department   | MaS             |
-      | Math Department     | MaD           | Math and Chemical  Department  | MaC             |
-      | Software Department | SftwrD        | Computer Department Department | CDD             |
+      | nameInputInfo       | codeInputInfo | e_nameInputInfo              | e_codeInputInfo |
+      | COMPUTER Department | CD            | SOFTWARE DEVELOPMENT IN TEST | SDET            |

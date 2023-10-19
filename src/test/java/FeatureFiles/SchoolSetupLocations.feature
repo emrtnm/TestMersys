@@ -16,19 +16,19 @@ Feature: SchoolSetup Functionality
     And The admin user sending the informations in Dialog and choose the location type
       | nameInput        | <nameInputCode>   |
       | school_shortName | <schoolShortName> |
-      | capasity         | <capasityInfo>    |
+      | school_Capacity  | <capasityInfo>    |
     And Click on the save element in Dialog
       | saveBtn |
-    Then Success message should be display
 
+    Then Success message should be display
     When The admin click on the edit element Dialog
-      | editBtn |
+
     Then The admin user sending new locations information in Dialog
       | nameInput        | <e_nameInputCode>   |
       | school_shortName | <e_schoolShortName> |
-      | capasity         | <e_capasityInfo>    |
+
     And Click on the element in Dialog
-      | saveBtn |
+      | edit_saveButton |
     Then Success message should be display
 
     And Click on the element in Dialog for deleting
@@ -36,7 +36,7 @@ Feature: SchoolSetup Functionality
       | actionDeleteBtn |
     Then Success message should be display
     Examples:
-      | nameInputCode | schoolShortName | capasityInfo | e_nameInputCode | e_schoolShortName | e_capasityInfo |
-      | Z_107         | Z107            | 20           | *Z107           | *Z_107            | 25             |
+      | nameInputCode | schoolShortName | capasityInfo | e_nameInputCode | e_schoolShortName |
+      | Z_115         | Z1155           | 20           | *Z11107         | *Z_11107          |
 
 
