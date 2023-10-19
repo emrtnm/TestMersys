@@ -56,10 +56,12 @@ public class SchoolSetupDepartmentsSteps {
     @And("Click on the element in Dialog according to code as  {string} list for deleting")
     public void clickOnTheElementInDialogAccordingToCodeAsListForDeleting(String codeName) {
 
+        WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
         List<WebElement> list_codes = dc.department_CodeList;
         List<WebElement> delete_Buttons = dc.deleteBtn_List;
 
         for (int i = 0; i <list_codes.size() ; i++) {
+            wait.until(ExpectedConditions.visibilityOf(list_codes.get(i)));
             if(list_codes.get(i).getText().equalsIgnoreCase(codeName)){
 
                 Events.click(delete_Buttons.get(i));

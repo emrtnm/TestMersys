@@ -34,5 +34,7 @@ Feature: SchoolSetup Functionality 2
 
     Then Success message should be display
     Examples:
-      | nameInputInfo       | codeInputInfo | e_nameInputInfo              | e_codeInputInfo |
-      | COMPUTER Department | CD            | SOFTWARE DEVELOPMENT IN TEST | SDET            |
+      | nameInputInfo       | codeInputInfo | e_nameInputInfo               | e_codeInputInfo |
+      | COMPUTER Department | CD            | aSOFTWARE DEVELOPMENT IN TEST | SDET            |
+      | Art Department      | ART           | ARTIFICIAL                    | arti            |
+      | Science Department  | SCNCE         | atesting                      | scn             |
