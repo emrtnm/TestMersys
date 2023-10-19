@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class DialogContent {
     public DialogContent() {
         PageFactory.initElements(BaseDriver.getDriver(), this);
@@ -61,6 +63,11 @@ public class DialogContent {
     @FindBy(xpath="//div[contains(text(),'already exists')]")
     public WebElement alreadyExistMsg;
 
+    @FindBy(css = "span[class*='mat-option-text']")
+    public List<WebElement> school_LocationType;
+
+    @FindBy(css = "input[inputmode='numeric']")
+    public WebElement school_Capacity;
 
     public WebElement getWebElement(String strElement){
 
@@ -82,6 +89,8 @@ public class DialogContent {
             case "successMsg" : return this.successMsg;
             case "ShortName" : return this.ShortName;
             case "alreadyExistMsg" : return this.alreadyExistMsg;
+            case "school_Capacity" : return this.school_Capacity;
+
 
         }
         return null;
