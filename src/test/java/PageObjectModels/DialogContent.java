@@ -84,13 +84,8 @@ public class DialogContent {
     @FindBy(css = "tbody[role*='rowgroup'] > tr > td:nth-child(3)")
     public List<WebElement> department_CodeList;
 
-
-
-    //
     public WebElement getWebElement(String strElement){
-
         switch (strElement){
-
             case "username" : return this.username;
             case "password" : return this.password;
             case "loginButton" : return this.loginButton;
@@ -109,8 +104,7 @@ public class DialogContent {
             case "school_Capacity" : return this.school_Capacity;
             case "school_shortName" : return this.school_shortName;
             case "edit_saveButton" : return this.edit_saveButton;
-
+            default: return null;
         }
-        return null;
     }
 }

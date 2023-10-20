@@ -37,12 +37,8 @@ public class LeftNav {
     @FindBy(xpath = "//span[text()='Departments']")
     public WebElement schoolSetup_Departments;
 
-
-
     public WebElement getWebElement(String strElement){
-
         switch (strElement){
-
             case "setup" : return this.setup;
             case "humanResources" : return this.humanResources;
             case "dropSetup" : return this.dropSetup;
@@ -52,9 +48,8 @@ public class LeftNav {
             case "schoolSetup" : return this.schoolSetup;
             case "schoolSetup_Locations" : return this.schoolSetup_Locations;
             case "schoolSetup_Departments" : return this.schoolSetup_Departments;
-
+            default: return null;
         }
-        return null;
     }
 }
 
