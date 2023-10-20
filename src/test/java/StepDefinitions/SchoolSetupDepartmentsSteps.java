@@ -18,7 +18,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-
 public class SchoolSetupDepartmentsSteps {
     DialogContent dc = new DialogContent();
     LeftNav ln = new LeftNav();
@@ -30,7 +29,6 @@ public class SchoolSetupDepartmentsSteps {
         for (int i = 0; i <lists.size() ; i++) {
             WebElement element = dc.getWebElement(lists.get(i).get(0));
             Events.sendKeys(element,lists.get(i).get(1));
-
         }
     }
 
@@ -41,13 +39,12 @@ public class SchoolSetupDepartmentsSteps {
         for (int i = 0; i < lists.size(); i++) {
             WebElement element = dc.getWebElement(lists.get(i).get(0));
             Events.sendKeys(element, lists.get(i).get(1));
-
         }
     }
 
     @And("Click on the element in Dialog according to code as  {string} list for deleting")
     public void clickOnTheElementInDialogAccordingToCodeAsListForDeleting(String codeName) {
-        List<WebElement> list_codes = dc.department_CodeList;
+        List<WebElement> list_codes = dc.departmentCodeList;
         List<WebElement> delete_Buttons = dc.deleteBtn_List;
 
         for (int i = 0; i <list_codes.size() ; i++) {

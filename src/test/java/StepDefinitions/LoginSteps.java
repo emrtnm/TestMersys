@@ -24,4 +24,15 @@ public class LoginSteps {
     public void iShouldLoginSuccessfully() {
         Events.verifyContainsText(content.homeConfirmText, "Dashboard");
     }
+
+    @Given("Enter invalid username and password")
+    public void enterInvalidUsernameAndPassword() {
+        Events.sendKeys(content.username, "turkeytsa");
+        Events.sendKeys(content.password, "TechnoStudy123ss");
+    }
+
+    @When("I should see the invalid message")
+    public void iShouldSeeTheInvalidMessage() {
+        Events.verifyContainsText(content.invalidMsg, "Invalid");
+    }
 }

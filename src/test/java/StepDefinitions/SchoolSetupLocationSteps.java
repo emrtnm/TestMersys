@@ -85,7 +85,6 @@ public class SchoolSetupLocationSteps extends Events {
         for (int i = 0; i <lists.size() ; i++) {
             WebElement element = dc.getWebElement(lists.get(i).get(0));
             Events.sendKeys(element,lists.get(i).get(1));
-
         }
     }
 
