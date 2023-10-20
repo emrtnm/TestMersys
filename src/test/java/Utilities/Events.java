@@ -11,6 +11,8 @@ import org.testng.Assert;
 public class Events {
     public static void sendKeys(WebElement element, String text) {
         BaseDriver.getWait().until(ExpectedConditions.visibilityOf(element));
+        scrollToElement(element);
+        element.clear();
         element.sendKeys(text);
     }
 
@@ -40,5 +42,7 @@ public class Events {
         BaseDriver.getWait().until(ExpectedConditions.elementToBeClickable(element));
         return new Select(element);
     }
+
+
 
 }

@@ -34,7 +34,7 @@ public class LeftNav {
     @FindBy(xpath = "//span[text()='Locations']")
     public WebElement schoolSetup_Locations;
 
-    @FindBy(xpath = "//span[text()='Locations']")
+    @FindBy(xpath = "//span[text()='Departments']")
     public WebElement schoolSetup_Departments;
 
 
