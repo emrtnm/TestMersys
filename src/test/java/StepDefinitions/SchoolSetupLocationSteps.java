@@ -66,7 +66,6 @@ public class SchoolSetupLocationSteps extends Events {
     @Then("Success message should be display")
     public void successMessageShouldBeDisplay() {
         Events.verifyContainsText(dc.successMsg,"successfully");
-        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
 
     @When("The admin click on the edit element Dialog")
@@ -96,10 +95,7 @@ public class SchoolSetupLocationSteps extends Events {
             WebElement element = dc.getWebElement(list.get(i));
             Events.click(element);
         }
-
-        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
-
 
     @And("Click on the element in Dialog for deleting")
     public void clickOnTheElementInDialogForDeleting(DataTable dt) {
