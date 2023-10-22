@@ -22,6 +22,9 @@ public class LeftNav {
     @FindBy(xpath = "(//span[text()='Education'])[1]")
     public WebElement education;
 
+    @FindBy(xpath = "//*[text()='Positions']")
+    public WebElement positions;
+
     @FindBy(xpath = "//*[text()='Attestations']")
     public WebElement attestations;
 
@@ -43,6 +46,7 @@ public class LeftNav {
             case "humanResources" : return this.humanResources;
             case "dropSetup" : return this.dropSetup;
             case "education" : return this.education;
+            case "positions" : return this.positions;
             case "attestations" : return this.attestations;
             case "parameters" : return this.parameters;
             case "schoolSetup" : return this.schoolSetup;

@@ -57,6 +57,9 @@ public class DialogContent {
     @FindBy(css = "input[data-placeholder='Code']")
     public WebElement searchCodeInput;
 
+    @FindBy(css = "input[data-placeholder='Short Name']")
+    public WebElement searchShortNameInput;
+
     @FindBy(xpath="//div[contains(text(),'successfully')]")
     public WebElement successMsg;
 
@@ -95,6 +98,7 @@ public class DialogContent {
             case "codeInput" : return this.codeInput;
             case "searchNameInput" : return this.searchNameInput;
             case "searchCodeInput" : return this.searchCodeInput;
+            case "searchShortName" : return this.searchShortNameInput;
             case "successMsg" : return this.successMsg;
             case "ShortName" : return this.ShortName;
             case "alreadyExistMsg" : return this.alreadyExistMsg;
