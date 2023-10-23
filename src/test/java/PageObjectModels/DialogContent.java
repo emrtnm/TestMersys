@@ -84,6 +84,16 @@ public class DialogContent {
     @FindBy(css = "tbody[role*='rowgroup'] > tr > td:nth-child(3)")
     public List<WebElement> departmentCodeList;
 
+    @FindBy (css = "ms-dialog-content input[data-placeholder='IBAN']")
+    public WebElement inputIban;
+    @FindBy (css =" ms-dialog-content input[data-placeholder='Integration Code']")
+    public WebElement IntegrationCodeInput;
+    @FindBy (css = "ms-dialog-content mat-select")
+    public WebElement currency;
+
+    @FindBy (xpath = "//mat-option/span")
+    public WebElement currency1;
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "username" : return this.username;
@@ -105,6 +115,11 @@ public class DialogContent {
             case "school_Capacity" : return this.schoolCapacity;
             case "school_shortName" : return this.schoolShortName;
             case "edit_saveButton" : return this.editSaveButton;
+            case "inputIban" :return this.inputIban;
+            case "IntegrationCodeInput" :return this.IntegrationCodeInput;
+            case "currency" :return this.currency;
+            case "currency1" :return this.currency1;
+
             default: return null;
         }
     }

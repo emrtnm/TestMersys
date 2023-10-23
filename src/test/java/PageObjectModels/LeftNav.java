@@ -40,6 +40,9 @@ public class LeftNav {
     @FindBy(xpath = "//span[text()='Departments']")
     public WebElement schoolSetup_Departments;
 
+    @FindBy(xpath = "//span[text()='Bank Accounts']")
+    public WebElement bank_Accounts;
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "setup" : return this.setup;
@@ -52,6 +55,7 @@ public class LeftNav {
             case "schoolSetup" : return this.schoolSetup;
             case "schoolSetup_Locations" : return this.schoolSetup_Locations;
             case "schoolSetup_Departments" : return this.schoolSetup_Departments;
+            case "bank_Accounts" :return  this.bank_Accounts;
             default: return null;
         }
     }
