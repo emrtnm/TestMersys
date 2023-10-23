@@ -34,15 +34,10 @@ public class Events {
     public static void verifyContainsText(WebElement element, String value) {
         BaseDriver.getWait().until(ExpectedConditions.textToBePresentInElement(element, value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
-        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
-
     }
 
     public static Select select(WebElement element) {
         BaseDriver.getWait().until(ExpectedConditions.elementToBeClickable(element));
         return new Select(element);
     }
-
-
-
 }

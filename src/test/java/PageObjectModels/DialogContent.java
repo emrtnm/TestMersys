@@ -57,6 +57,9 @@ public class DialogContent {
     @FindBy(css = "input[data-placeholder='Code']")
     public WebElement searchCodeInput;
 
+    @FindBy(css = "input[data-placeholder='Short Name']")
+    public WebElement searchShortNameInput;
+
     @FindBy(xpath="//div[contains(text(),'successfully')]")
     public WebElement successMsg;
 
@@ -66,31 +69,23 @@ public class DialogContent {
     @FindBy(xpath="//div[contains(text(),'already exists')]")
     public WebElement alreadyExistMsg;
 
-    @FindBy(css = "span[class*='mat-option-text']")
-    public List<WebElement> school_LocationType;
+    @FindBy(xpath="//div[contains(text(),'Invalid')]")
+    public WebElement invalidMsg;
 
     @FindBy(css = "input[inputmode='numeric']")
-    public WebElement school_Capacity;
+    public WebElement schoolCapacity;
 
     @FindBy(css = "input[data-placeholder='Short Name']")
-    public WebElement school_shortName;
+    public WebElement schoolShortName;
 
     @FindBy(xpath = "//ms-save-button//button")
-    public WebElement edit_saveButton;
-
-    @FindBy(css = "button[role*='switch'][id*='11']")
-    public WebElement toggle_button;
+    public WebElement editSaveButton;
 
     @FindBy(css = "tbody[role*='rowgroup'] > tr > td:nth-child(3)")
-    public List<WebElement> department_CodeList;
+    public List<WebElement> departmentCodeList;
 
-
-
-    //
     public WebElement getWebElement(String strElement){
-
         switch (strElement){
-
             case "username" : return this.username;
             case "password" : return this.password;
             case "loginButton" : return this.loginButton;
@@ -103,14 +98,14 @@ public class DialogContent {
             case "codeInput" : return this.codeInput;
             case "searchNameInput" : return this.searchNameInput;
             case "searchCodeInput" : return this.searchCodeInput;
+            case "searchShortName" : return this.searchShortNameInput;
             case "successMsg" : return this.successMsg;
             case "ShortName" : return this.ShortName;
             case "alreadyExistMsg" : return this.alreadyExistMsg;
-            case "school_Capacity" : return this.school_Capacity;
-            case "school_shortName" : return this.school_shortName;
-            case "edit_saveButton" : return this.edit_saveButton;
-
+            case "school_Capacity" : return this.schoolCapacity;
+            case "school_shortName" : return this.schoolShortName;
+            case "edit_saveButton" : return this.editSaveButton;
+            default: return null;
         }
-        return null;
     }
 }

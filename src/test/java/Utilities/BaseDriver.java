@@ -31,7 +31,7 @@ public class BaseDriver {
 
     public static WebDriverWait getWait() {
         if (wait == null) {
-            wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+            wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         }
 
         return wait;
