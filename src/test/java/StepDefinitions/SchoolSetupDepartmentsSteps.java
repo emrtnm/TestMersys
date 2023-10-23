@@ -33,10 +33,6 @@ public class SchoolSetupDepartmentsSteps {
 
         }
 
-
-
-
-
     }
 
     @Then("The admin user sending new departments information in Dialog")
