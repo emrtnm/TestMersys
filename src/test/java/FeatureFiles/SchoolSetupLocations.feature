@@ -5,7 +5,7 @@ Feature: SchoolSetup Functionality
     And I click login button
     When I should login successfully
 
-  @Smoke,@Regression
+  @Smoke,@Regression,@School
   Scenario Outline: School locations progress
     Given Click on the elements in LefNav
       | setup                 |
