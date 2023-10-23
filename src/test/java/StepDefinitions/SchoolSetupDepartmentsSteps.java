@@ -52,7 +52,7 @@ public class SchoolSetupDepartmentsSteps {
     @And("Click on the element in Dialog according to code as  {string} list for deleting")
     public void clickOnTheElementInDialogAccordingToCodeAsListForDeleting(String codeName) {
 
-        List<WebElement> list_codes = dc.department_CodeList;
+        List<WebElement> list_codes = dc.departmentCodeList;
         List<WebElement> delete_Buttons = dc.deleteBtn_List;
 
         for (int i = 0; i <list_codes.size() ; i++) {
