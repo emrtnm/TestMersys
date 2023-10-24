@@ -63,7 +63,8 @@ public class PositionManagementSteps {
     @And("Click on the edit button in the DialogContent")
     public void clickOnTheEditButtonInTheDialogContent() {
         List<WebElement> editButtonList = dc.editBtn;
-        Events.click(editButtonList.get(0));    }
+        Events.click(editButtonList.get(0));
+    }
 
     @And("Click on the element in the DialogContent for deleting")
     public void clickOnTheElementInTheDialogContentForDeleting(DataTable dt) {
