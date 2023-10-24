@@ -5,7 +5,7 @@ Feature: Human Resources feature
     And I click login button
     When I should login successfully
 
-    @HR, @Smoke, @Regression
+  @HR, @Smoke, @Regression
   Scenario Outline: User adds, edits and deletes data in the Attestations functionality
 
     And Click on the element in the LeftNav
