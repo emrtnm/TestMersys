@@ -19,7 +19,6 @@ import java.time.Duration;
 import java.util.List;
 
 public class PositionManagementSteps {
-
     DialogContent dc = new DialogContent();
     LeftNav ln = new LeftNav();
 
@@ -68,7 +67,6 @@ public class PositionManagementSteps {
 
     @And("Click on the element in the DialogContent for deleting")
     public void clickOnTheElementInTheDialogContentForDeleting(DataTable dt) {
-
         WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(2));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[contains(text(),'successfully')]")));
 
