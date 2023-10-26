@@ -60,15 +60,13 @@ public class PositionManagementSteps {
     }
 
     @And("Click on the edit button in the DialogContent")
-    public void clickOnTheEditButtonInTheDialogContent() {
+    public void clickOnTheEditButtonInTheDialogContent() throws InterruptedException {
+        Thread.sleep(1500);
         Events.click(dc.editBtn);
     }
 
     @And("Click on the element in the DialogContent for deleting")
     public void clickOnTheElementInTheDialogContentForDeleting(DataTable dt) {
-        WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(2));
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[contains(text(),'successfully')]")));
-
         List<String> list = dt.asList();
 
         for (int i = 0; i <list.size() ; i++) {

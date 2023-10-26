@@ -1,21 +1,22 @@
 package StepDefinitions;
 
 import PageObjectModels.DialogContent;
+import PageObjectModels.LeftNav;
 import Utilities.Events;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.WebElement;
 import java.util.List;
 
 
 public class SchoolSetupDepartmentsSteps {
     DialogContent dc = new DialogContent();
+    LeftNav ln = new LeftNav();
 
     @And("The admin user sending the departments information in Dialog")
     public void theAdminUserSendingTheDepartmentsInformationInDialog(DataTable dt) {
-        List<List<String>> lists = dt.asLists();
 
+        List<List<String>> lists = dt.asLists();
         for (int i = 0; i <lists.size() ; i++) {
             WebElement element = dc.getWebElement(lists.get(i).get(0));
             Events.sendKeys(element,lists.get(i).get(1));
@@ -24,11 +25,12 @@ public class SchoolSetupDepartmentsSteps {
 
     @Then("The admin user sending new departments information in Dialog")
     public void theAdminUserSendingNewDepartmentsInformationInDialog(DataTable dt) {
-        List<List<String>> lists = dt.asLists();
 
+        List<List<String>> lists = dt.asLists();
         for (int i = 0; i < lists.size(); i++) {
             WebElement element = dc.getWebElement(lists.get(i).get(0));
             Events.sendKeys(element, lists.get(i).get(1));
+
         }
     }
 
@@ -38,7 +40,7 @@ public class SchoolSetupDepartmentsSteps {
         List<WebElement> delete_Buttons = dc.deleteBtn_List;
 
         for (int i = 0; i <list_codes.size() ; i++) {
-            if(list_codes.get(i).getText().equalsIgnoreCase(codeName)){
+            if (list_codes.get(i).getText().equalsIgnoreCase(codeName)){
                 Events.click(delete_Buttons.get(i));
                 Events.click(dc.actionDeleteBtn);
             }

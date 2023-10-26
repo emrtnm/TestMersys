@@ -112,6 +112,9 @@ public class DialogContent {
     @FindBy(xpath = "//*[@id='ms-text-field-30']")
     public WebElement namefields;
 
+    @FindBy(xpath = "//ms-edit-button//button")
+    public List<WebElement> editBtnList;
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "username" : return this.username;

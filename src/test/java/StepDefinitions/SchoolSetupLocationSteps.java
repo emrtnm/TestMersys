@@ -20,7 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class SchoolSetupLocationSteps extends Events {
+public class SchoolSetupLocationSteps {
     DialogContent dc = new DialogContent();
     LeftNav ln = new LeftNav();
     @Given("Click on the elements in LefNav")
@@ -51,6 +51,8 @@ public class SchoolSetupLocationSteps extends Events {
             WebElement element = dc.getWebElement(lists.get(i).get(0));
             Events.sendKeys(element,lists.get(i).get(1));
         }
+
+        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ENTER).build().perform();
     }
 
     @And("Click on the save element in Dialog")
@@ -65,14 +67,17 @@ public class SchoolSetupLocationSteps extends Events {
 
     @Then("Success message should be display")
     public void successMessageShouldBeDisplay() {
-        Events.verifyContainsText(dc.successMsg,"success");
+        Events.verifyContainsText(dc.successMsg,"successfully");
+        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
+
 
     @When("The admin click on the edit element Dialog")
     public void theAdminClickOnTheEditElementDialog() {
         WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[contains(text(),'successfully')]")));
-        Events.click(dc.editBtn);
+        List<WebElement> edit_List = dc.editBtnList;
+        Events.click(edit_List.get(0));
         wait.until(ExpectedConditions.visibilityOf(dc.nameInput));
     }
 
@@ -98,15 +103,14 @@ public class SchoolSetupLocationSteps extends Events {
 
     @And("Click on the element in Dialog for deleting")
     public void clickOnTheElementInDialogForDeleting(DataTable dt) {
-        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
 
         WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[contains(text(),'successfully')]")));
 
         List<String> list = dt.asList();
 
         for (int i = 0; i <list.size() ; i++) {
             WebElement element = dc.getWebElement(list.get(i));
+            wait.until(ExpectedConditions.visibilityOf(element));
             Events.click(element);
         }
     }

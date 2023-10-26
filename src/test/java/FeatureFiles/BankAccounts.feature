@@ -6,7 +6,7 @@ Feature:Creating a Bank Account
     When I should login successfully
 
     @Smoke,@Regression
-    Scenario Outline:User adds, edits and deletes bank accounts data
+    Scenario Outline: User adds, edits and deletes bank accounts data
 
       And Click on the element in the LeftNav
         |setup         |
@@ -36,6 +36,8 @@ Feature:Creating a Bank Account
       And Click on the element in the DialogContent
         | searchBtn |
 
+      And Wait 1000 sn
+
       And Click on the edit button in the DialogContent
 
       Then The admin user sending new locations information in Dialog
@@ -53,11 +55,12 @@ Feature:Creating a Bank Account
       And Click on the element in the DialogContent
         | searchBtn |
 
-      And Click on the edit button in the DialogContent
+      And Wait 1500 sn
 
       And Click on the element in Dialog for deleting
         | deleteBtn       |
         | actionDeleteBtn |
+
       Then Success message should be display
 
       Examples:

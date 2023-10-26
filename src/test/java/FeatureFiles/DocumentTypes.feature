@@ -35,6 +35,8 @@ Feature: DataTypes
     And Click on the element in the DialogContent
       | searchBtn |
 
+    And Wait 1000 sn
+
     And Click on the edit button in the DialogContent
 
     And User sends the keys into the DialogBox
@@ -43,6 +45,8 @@ Feature: DataTypes
     And Click on the element in the DialogContent
       | saveBtn |
 
+    And Wait 1000 sn
+
     Then Success message should be displayed
 
     And User sends the keys into the DialogBox
@@ -50,6 +54,8 @@ Feature: DataTypes
 
     And Click on the element in the DialogContent
       | searchBtn |
+
+    And Wait 1000 sn
 
     And Click on the element in the DialogContent for deleting
       | deleteBtn       |

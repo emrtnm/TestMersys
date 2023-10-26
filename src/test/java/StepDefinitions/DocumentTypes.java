@@ -52,5 +52,10 @@ public class DocumentTypes {
     public void pressESCButton () {
         new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
+
+    @And("Wait {int} sn")
+    public void waitSn(int sc) throws InterruptedException {
+        Thread.sleep(sc);
+    }
 }
 

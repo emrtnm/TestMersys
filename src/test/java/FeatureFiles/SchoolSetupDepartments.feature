@@ -5,7 +5,7 @@ Feature: SchoolSetup Functionality 2
     And I click login button
     When I should login successfully
 
-  @Smoke, @Regression, @School, @Departments
+  @Smoke,@Regression,@School,@Departments
   Scenario Outline: School departments progress
     Given Click on the elements in LefNav
       | setup                   |
@@ -19,7 +19,7 @@ Feature: SchoolSetup Functionality 2
       | nameInput | <nameInputInfo> |
       | codeInput | <codeInputInfo> |
 
-    And Click on the element in the DialogContent
+    And Click on the save element in Dialog
       | saveBtn |
 
     Then Success message should be display
@@ -30,17 +30,18 @@ Feature: SchoolSetup Functionality 2
       | nameInput | <e_nameInputInfo> |
       | codeInput | <e_codeInputInfo> |
 
-    And Click on the element in Dialog
+    And Click on the save element in Dialog
       | edit_saveButton |
-
     Then Success message should be display
+    
+    And Wait 1500 sn
 
-    And Click on the element in Dialog according to code as  "<e_codeInputInfo>" list for deleting
+    And Click on the element in the DialogContent for deleting
+      | deleteBtn       |
+      | actionDeleteBtn |
 
     Then Success message should be display
 
     Examples:
-      | nameInputInfo       | codeInputInfo | e_nameInputInfo               | e_codeInputInfo |
-      | COMPUTER Department | CD            | aSOFTWARE DEVELOPMENT IN TEST | SDET            |
-      | Art Department      | ART           | ARTIFICIAL                    | arti            |
-      | Science Department  | SCNCE         | atesting                      | scn             |
+      | nameInputInfo   | codeInputInfo | e_nameInputInfo | e_codeInputInfo |
+      | A-Mobile Engineer | WBS            | A-MOBILE Enginner | MBS              |

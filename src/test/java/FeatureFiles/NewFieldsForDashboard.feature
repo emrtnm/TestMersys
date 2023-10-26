@@ -46,6 +46,8 @@ Feature: Fields module
     And Click on the element in the DialogContent
       | searchBtn |
 
+    And Wait 1500 sn
+
     And Click on the element in the DialogContent for deleting
       | deleteBtn       |
       | actionDeleteBtn |
