@@ -32,6 +32,7 @@ Feature: SchoolSetup Functionality 2
 
     And Click on the save element in Dialog
       | edit_saveButton |
+
     Then Success message should be display
     
     And Wait 1500 sn
@@ -44,4 +45,4 @@ Feature: SchoolSetup Functionality 2
 
     Examples:
       | nameInputInfo   | codeInputInfo | e_nameInputInfo | e_codeInputInfo |
-      | A-Mobile Engineer | WBS            | A-MOBILE Enginner | MBS              |
+      | A-Mobile Engineer | WBSASDAD            | A-MOBILE Enginner | MBSAAD4              |

@@ -24,6 +24,9 @@ Feature: SchoolSetup Functionality
       | saveBtn |
 
     Then Success message should be display
+    
+    And Wait 1500 sn
+    
     When The admin click on the edit element Dialog
 
     Then The admin user sending new locations information in Dialog
@@ -34,6 +37,8 @@ Feature: SchoolSetup Functionality
       | edit_saveButton |
 
     Then Success message should be display
+
+    And Wait 1500 sn
 
     And Click on the element in Dialog for deleting
       | deleteBtn       |

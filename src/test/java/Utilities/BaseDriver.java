@@ -19,7 +19,7 @@ public class BaseDriver {
         logger.setLevel(Level.SEVERE);
 
         if (driver == null) {
-            driver = new SafariDriver();
+            driver = new ChromeDriver();
         }
 
         driver.manage().window().maximize();
