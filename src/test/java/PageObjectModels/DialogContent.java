@@ -42,7 +42,7 @@ public class DialogContent {
     @FindBy(css = "ms-search-button")
     public WebElement searchBtn;
 
-    @FindBy(css = "ms-save-button")
+    @FindBy(xpath = "//ms-save-button//button")
     public WebElement saveBtn;
 
     @FindBy(css = "ms-dialog-content input[data-placeholder='Name']")

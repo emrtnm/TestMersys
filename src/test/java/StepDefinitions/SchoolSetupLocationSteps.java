@@ -51,6 +51,8 @@ public class SchoolSetupLocationSteps extends Events {
             WebElement element = dc.getWebElement(lists.get(i).get(0));
             Events.sendKeys(element,lists.get(i).get(1));
         }
+
+        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ENTER).build().perform();
     }
 
     @And("Click on the save element in Dialog")
@@ -66,7 +68,9 @@ public class SchoolSetupLocationSteps extends Events {
     @Then("Success message should be display")
     public void successMessageShouldBeDisplay() {
         Events.verifyContainsText(dc.successMsg,"successfully");
+        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
+
 
     @When("The admin click on the edit element Dialog")
     public void theAdminClickOnTheEditElementDialog() {
@@ -99,15 +103,14 @@ public class SchoolSetupLocationSteps extends Events {
 
     @And("Click on the element in Dialog for deleting")
     public void clickOnTheElementInDialogForDeleting(DataTable dt) {
-        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
 
         WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[contains(text(),'successfully')]")));
 
         List<String> list = dt.asList();
 
         for (int i = 0; i <list.size() ; i++) {
             WebElement element = dc.getWebElement(list.get(i));
+            wait.until(ExpectedConditions.visibilityOf(element));
             Events.click(element);
         }
     }

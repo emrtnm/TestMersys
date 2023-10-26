@@ -38,5 +38,7 @@ Feature: SchoolSetup Functionality
     Examples:
       | nameInputCode | schoolShortName | capasityInfo | e_nameInputCode | e_schoolShortName |
       | Z_115         | Z1155           | 20           | *Z11107         | *Z_11107          |
+      | Z_116         | Z1156           | 26           | *Z11106         | *Z_11106          |
+      | Z_117         | Z1157           | 27           | *Z11108         | *Z_11108          |
 
 

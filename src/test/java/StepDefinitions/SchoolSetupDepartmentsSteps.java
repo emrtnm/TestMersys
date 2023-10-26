@@ -7,6 +7,7 @@ import Utilities.Events;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.apache.poi.ss.formula.functions.Even;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -69,5 +70,9 @@ public class SchoolSetupDepartmentsSteps {
 
 
 
+    }
+
+    @When("The admin click on the edit element")
+    public void theAdminClickOnTheEditElement() {
     }
 }
