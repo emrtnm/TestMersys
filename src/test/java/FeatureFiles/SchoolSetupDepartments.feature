@@ -34,5 +34,5 @@ Feature: SchoolSetup Functionality 2
 
     Then Success message should be display
     Examples:
-      | nameInputInfo | codeInputInfo | e_nameInputInfo   | e_codeInputInfo |
-      | Web Engineer  | WB            | Software Enginner | SE              |
+      | nameInputInfo   | codeInputInfo | e_nameInputInfo | e_codeInputInfo |
+      | Mobile Engineer | WB            | MOBILE Enginner | MB              |
