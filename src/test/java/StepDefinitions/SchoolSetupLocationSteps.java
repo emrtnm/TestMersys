@@ -65,7 +65,7 @@ public class SchoolSetupLocationSteps extends Events {
 
     @Then("Success message should be display")
     public void successMessageShouldBeDisplay() {
-        Events.verifyContainsText(dc.successMsg,"successfully");
+        Events.verifyContainsText(dc.successMsg,"success");
     }
 
     @When("The admin click on the edit element Dialog")

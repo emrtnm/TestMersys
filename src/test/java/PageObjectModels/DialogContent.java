@@ -30,8 +30,14 @@ public class DialogContent {
     @FindBy(xpath = "//ms-edit-button//button")
     public List<WebElement> editBtn;
 
+    @FindBy(css = "table tr:last-child ms-edit-button button")
+    public WebElement lastEditBtn;
+
     @FindBy(css = "ms-delete-button")
     public WebElement deleteBtn;
+
+    @FindBy(css = "table tr:last-child ms-delete-button")
+    public WebElement lastDelBtn;
 
     @FindBy(css = "ms-delete-button")
     public List<WebElement> deleteBtn_List;
@@ -94,6 +100,9 @@ public class DialogContent {
     @FindBy (xpath = "//mat-option/span")
     public WebElement currency1;
 
+    @FindBy (css = "ms-text-field input[data-placeholder='Order']")
+    public WebElement orderInput;
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "username" : return this.username;
@@ -115,11 +124,12 @@ public class DialogContent {
             case "school_Capacity" : return this.schoolCapacity;
             case "school_shortName" : return this.schoolShortName;
             case "edit_saveButton" : return this.editSaveButton;
-            case "inputIban" :return this.inputIban;
+            case "inputIban" : return this.inputIban;
             case "IntegrationCodeInput" :return this.IntegrationCodeInput;
-            case "currency" :return this.currency;
-            case "currency1" :return this.currency1;
-
+            case "currency" : return this.currency;
+            case "currency1" : return this.currency1;
+            case "orderInput": return this.orderInput;
+            case "lastDeleteBtn": return this.lastDelBtn;
             default: return null;
         }
     }
