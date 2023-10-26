@@ -86,6 +86,7 @@ public class DialogContent {
 
     @FindBy (css = "ms-dialog-content input[data-placeholder='IBAN']")
     public WebElement inputIban;
+
     @FindBy (css =" ms-dialog-content input[data-placeholder='Integration Code']")
     public WebElement IntegrationCodeInput;
     @FindBy (css = "ms-dialog-content mat-select")
@@ -93,6 +94,15 @@ public class DialogContent {
 
     @FindBy (xpath = "//mat-option/span")
     public WebElement currency1;
+
+    @FindBy(xpath = "(//*[text()='Stage'])[3]")
+    public WebElement stage_input;
+
+    @FindBy(xpath = "(//*[@role='listbox']//span)[1]")
+    public WebElement stageList;
+
+    @FindBy(xpath = "//*[@id='ms-text-field-30']")
+    public WebElement namefields;
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
@@ -119,6 +129,9 @@ public class DialogContent {
             case "IntegrationCodeInput" :return this.IntegrationCodeInput;
             case "currency" :return this.currency;
             case "currency1" :return this.currency1;
+            case "stage_input" :return this.stage_input;
+            case "stageList" :return this.stageList;
+            case "namefield" :return this.namefields;
 
             default: return null;
         }
