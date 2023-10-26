@@ -3,6 +3,7 @@ package Utilities;
 import io.cucumber.java.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -18,7 +19,7 @@ public class BaseDriver {
         logger.setLevel(Level.SEVERE);
 
         if (driver == null) {
-            driver = new ChromeDriver();
+            driver = new SafariDriver();
         }
 
         driver.manage().window().maximize();

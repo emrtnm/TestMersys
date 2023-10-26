@@ -72,8 +72,7 @@ public class SchoolSetupLocationSteps extends Events {
     public void theAdminClickOnTheEditElementDialog() {
         WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[contains(text(),'successfully')]")));
-        List<WebElement> edit_List = dc.editBtn;
-        Events.click(edit_List.get(0));
+        Events.click(dc.editBtn);
         wait.until(ExpectedConditions.visibilityOf(dc.nameInput));
     }
 

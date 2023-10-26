@@ -46,6 +46,12 @@ public class LeftNav {
     @FindBy(xpath = "//span[text()='Grade Levels']")
     public WebElement gradeLevels;
 
+    @FindBy(xpath = "//span[text()='Document Types']")
+    public WebElement document_types;
+
+    @FindBy(xpath = "//span[text()='Fields']")
+    public WebElement fields;
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "setup" : return this.setup;
@@ -58,8 +64,10 @@ public class LeftNav {
             case "schoolSetup" : return this.schoolSetup;
             case "schoolSetup_Locations" : return this.schoolSetup_Locations;
             case "schoolSetup_Departments" : return this.schoolSetup_Departments;
-            case "bank_Accounts" :return  this.bank_Accounts;
-            case "gradeLevels" :return  this.gradeLevels;
+            case "bank_Accounts" : return  this.bank_Accounts;
+            case "gradeLevels" : return  this.gradeLevels;
+            case "documentType" : return  this.document_types;
+            case "fields" : return  this.fields;
             default: return null;
         }
     }

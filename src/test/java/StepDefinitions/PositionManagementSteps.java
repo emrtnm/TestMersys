@@ -49,7 +49,6 @@ public class PositionManagementSteps {
         for (int i = 0; i < items.size(); i++) {
             WebElement element = dc.getWebElement(items.get(i).get(0));
             String text = items.get(i).get(1);
-
             Events.sendKeys(element, text);
         }
     }
@@ -62,8 +61,7 @@ public class PositionManagementSteps {
 
     @And("Click on the edit button in the DialogContent")
     public void clickOnTheEditButtonInTheDialogContent() {
-        List<WebElement> editButtonList = dc.editBtn;
-        Events.click(editButtonList.get(0));
+        Events.click(dc.editBtn);
     }
 
     @And("Click on the element in the DialogContent for deleting")

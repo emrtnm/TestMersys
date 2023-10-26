@@ -28,7 +28,7 @@ public class DialogContent {
     public WebElement addBtn;
 
     @FindBy(xpath = "//ms-edit-button//button")
-    public List<WebElement> editBtn;
+    public WebElement editBtn;
 
     @FindBy(css = "table tr:last-child ms-edit-button button")
     public WebElement lastEditBtn;
@@ -103,6 +103,15 @@ public class DialogContent {
     @FindBy (css = "ms-text-field input[data-placeholder='Order']")
     public WebElement orderInput;
 
+    @FindBy(xpath = "(//*[text()='Stage'])[3]")
+    public WebElement stage_input;
+
+    @FindBy(xpath = "(//*[@role='listbox']//span)[1]")
+    public WebElement stageList;
+
+    @FindBy(xpath = "//*[@id='ms-text-field-30']")
+    public WebElement namefields;
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "username" : return this.username;
@@ -130,6 +139,9 @@ public class DialogContent {
             case "currency1" : return this.currency1;
             case "orderInput": return this.orderInput;
             case "lastDeleteBtn": return this.lastDelBtn;
+            case "stage_input" :return this.stage_input;
+            case "stageList" :return this.stageList;
+            case "namefield" :return this.namefields;
             default: return null;
         }
     }
