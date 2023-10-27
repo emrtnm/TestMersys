@@ -1,4 +1,5 @@
 Feature: Grade Levels Functionality
+
   Background:
     Given Enter username and password
     And I click login button
@@ -22,10 +23,14 @@ Feature: Grade Levels Functionality
     And Click on the element in the DialogContent
       | saveBtn |
 
-    Then Success message should be display
+    Then Success message should be displayed
 
     And Click on the last edit button
-    And Enter shortname "<editName>" and "<editShortName>"
+
+    And User sends the keys into the DialogBox
+      | nameInput | <editName> |
+
+    And Enter shortname "<editShortName>" for update
 
     And Click on the element in the DialogContent
       | saveBtn |
@@ -35,7 +40,8 @@ Feature: Grade Levels Functionality
     And Click on the element in Dialog for deleting
       | lastDeleteBtn   |
       | actionDeleteBtn |
-    Then Success message should be display
+
+    Then Success message should be displayed
 
     Examples:
       | name     | shortname      | order | editName | editShortName |

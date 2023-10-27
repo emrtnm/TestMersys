@@ -9,9 +9,9 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class BankAccounsSteps {
+public class BankAccountsSteps {
     DialogContent dc = new DialogContent();
-    LeftNav ln = new LeftNav();
+
     @And("The admin click on the edit element Dialog sends the keys into the DialogBox")
     public void theAdminClickOnTheEditElementDialogSendsTheKeysIntoTheDialogBox(DataTable dt) {
         List<List<String>> lists = dt.asLists();
@@ -30,5 +30,11 @@ public class BankAccounsSteps {
             WebElement linkWebElement = dc.getWebElement(strButtonsList.get(i));
             Events.click(linkWebElement);
         }
+    }
+
+    @And("Click on the search button")
+    public void clickOnTheSearchButton() throws InterruptedException {
+        Events.click(dc.searchBtn);
+        Thread.sleep(1500);
     }
 }

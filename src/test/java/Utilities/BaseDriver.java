@@ -19,13 +19,12 @@ public class BaseDriver {
         logger.setLevel(Level.SEVERE);
 
         if (driver == null) {
-            driver = new ChromeDriver();
+            driver = new SafariDriver();
         }
 
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-
 
         return driver;
     }

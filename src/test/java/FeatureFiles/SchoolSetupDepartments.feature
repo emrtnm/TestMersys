@@ -1,11 +1,11 @@
-Feature: SchoolSetup Functionality 2
+Feature: School Setup Department Functionality
 
   Background:
     Given Enter username and password
     And I click login button
     When I should login successfully
 
-  @Smoke,@Regression,@School,@Departments
+  @Smoke, @Regression, @School, @Departments
   Scenario Outline: School departments progress
     Given Click on the elements in LefNav
       | setup                   |
@@ -22,9 +22,9 @@ Feature: SchoolSetup Functionality 2
     And Click on the save element in Dialog
       | saveBtn |
 
-    Then Success message should be display
+    Then Success message should be displayed
 
-    When The admin click on the edit element Dialog
+    And Click on the edit button in the DialogContent
 
     Then The admin user sending new departments information in Dialog
       | nameInput | <e_nameInputInfo> |
@@ -33,16 +33,14 @@ Feature: SchoolSetup Functionality 2
     And Click on the save element in Dialog
       | edit_saveButton |
 
-    Then Success message should be display
-    
-    And Wait 1500 sn
+    Then Success message should be displayed
 
-    And Click on the element in the DialogContent for deleting
+    And Click on the element in Dialog for deleting
       | deleteBtn       |
       | actionDeleteBtn |
 
-    Then Success message should be display
+    Then Success message should be displayed
 
     Examples:
-      | nameInputInfo   | codeInputInfo | e_nameInputInfo | e_codeInputInfo |
-      | A-Mobile Engineer | WBSASDAD            | A-MOBILE Enginner | MBSAAD4              |
+      | nameInputInfo     | codeInputInfo | e_nameInputInfo   | e_codeInputInfo |
+      | A-Mobile Engineer | WBSASDAD      | A-MOBILE Enginner | MBSAAD4         |

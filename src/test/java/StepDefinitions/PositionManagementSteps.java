@@ -20,6 +20,7 @@ import java.util.List;
 
 public class PositionManagementSteps {
     DialogContent dc = new DialogContent();
+
     LeftNav ln = new LeftNav();
 
     @And("Click on the element in the LeftNav")
@@ -33,7 +34,7 @@ public class PositionManagementSteps {
     }
 
     @And("Click on the element in the DialogContent")
-    public void clickOnTheElementInTheDialogContent(DataTable buttons){
+    public void clickOnTheElementInTheDialogContent(DataTable buttons) {
         List<String> strButtonsList = buttons.asList(String.class);
 
         for (int i = 0; i < strButtonsList.size(); i++) {
@@ -48,15 +49,14 @@ public class PositionManagementSteps {
 
         for (int i = 0; i < items.size(); i++) {
             WebElement element = dc.getWebElement(items.get(i).get(0));
-            String text = items.get(i).get(1);
-            Events.sendKeys(element, text);
+            Events.sendKeys(element, items.get(i).get(1));
         }
     }
 
     @Then("Success message should be displayed")
-    public void successMessageShouldBeDisplayed() {
+    public void successMessageShouldBeDisplayed() throws InterruptedException {
         Events.verifyContainsText(dc.successMsg, "success");
-        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+        Thread.sleep(1000);
     }
 
     @And("Click on the edit button in the DialogContent")

@@ -1,4 +1,4 @@
-Feature: SchoolSetup Functionality
+Feature: School Setup Location Functionality
 
   Background:
     Given Enter username and password
@@ -18,16 +18,14 @@ Feature: SchoolSetup Functionality
     And The admin user sending the informations in Dialog and choose the location type
       | nameInput        | <nameInputCode>   |
       | school_shortName | <schoolShortName> |
-      | school_Capacity  | <capasityInfo>    |
+      | school_Capacity  | <capacityInfo>    |
 
     And Click on the save element in Dialog
       | saveBtn |
 
-    Then Success message should be display
-    
-    And Wait 1500 sn
-    
-    When The admin click on the edit element Dialog
+    Then Success message should be displayed
+
+    And Click on the edit button in the DialogContent
 
     Then The admin user sending new locations information in Dialog
       | nameInput        | <e_nameInputCode>   |
@@ -36,16 +34,14 @@ Feature: SchoolSetup Functionality
     And Click on the element in Dialog
       | edit_saveButton |
 
-    Then Success message should be display
-
-    And Wait 1500 sn
+    Then Success message should be displayed
 
     And Click on the element in Dialog for deleting
       | deleteBtn       |
       | actionDeleteBtn |
 
-    Then Success message should be display
+    Then Success message should be displayed
 
     Examples:
-      | nameInputCode | schoolShortName | capasityInfo | e_nameInputCode | e_schoolShortName |
-      | Z_115         | Z1155           | 20           | Z11107          | Z_11107           |
+      | nameInputCode | schoolShortName | capacityInfo | e_nameInputCode | e_schoolShortName |
+      | Z_G5          | Z1155           | 20           | Z_G5_Edit       | Z_11107           |

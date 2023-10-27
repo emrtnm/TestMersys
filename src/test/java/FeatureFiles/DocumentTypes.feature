@@ -1,4 +1,4 @@
-Feature: DataTypes
+Feature: Document Types Management Functionality
 
   Background:
     Given Enter username and password
@@ -27,15 +27,12 @@ Feature: DataTypes
     And Click on the save element in Dialog
       | saveBtn |
 
-    Then Success message should be display
+    Then Success message should be displayed
 
     And User sends the keys into the DialogBox
       | searchNameInput | <name> |
 
-    And Click on the element in the DialogContent
-      | searchBtn |
-
-    And Wait 1000 sn
+    And Click on the search button
 
     And Click on the edit button in the DialogContent
 
@@ -45,17 +42,12 @@ Feature: DataTypes
     And Click on the element in the DialogContent
       | saveBtn |
 
-    And Wait 1000 sn
-
     Then Success message should be displayed
 
     And User sends the keys into the DialogBox
       | searchNameInput | <editName> |
 
-    And Click on the element in the DialogContent
-      | searchBtn |
-
-    And Wait 1000 sn
+    And Click on the search button
 
     And Click on the element in the DialogContent for deleting
       | deleteBtn       |

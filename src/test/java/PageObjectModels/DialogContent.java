@@ -92,8 +92,10 @@ public class DialogContent {
 
     @FindBy (css = "ms-dialog-content input[data-placeholder='IBAN']")
     public WebElement inputIban;
+
     @FindBy (css =" ms-dialog-content input[data-placeholder='Integration Code']")
     public WebElement IntegrationCodeInput;
+
     @FindBy (css = "ms-dialog-content mat-select")
     public WebElement currency;
 
@@ -117,35 +119,35 @@ public class DialogContent {
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
-            case "username" : return this.username;
-            case "password" : return this.password;
-            case "loginButton" : return this.loginButton;
-            case "addBtn" : return this.addBtn;
-            case "deleteBtn" : return this.deleteBtn;
-            case "actionDeleteBtn" : return this.actionDeleteBtn;
-            case "searchBtn" : return this.searchBtn;
-            case "saveBtn" : return this.saveBtn;
-            case "nameInput" : return this.nameInput;
-            case "codeInput" : return this.codeInput;
-            case "searchNameInput" : return this.searchNameInput;
-            case "searchCodeInput" : return this.searchCodeInput;
-            case "searchShortName" : return this.searchShortNameInput;
-            case "successMsg" : return this.successMsg;
-            case "ShortName" : return this.ShortName;
-            case "alreadyExistMsg" : return this.alreadyExistMsg;
-            case "school_Capacity" : return this.schoolCapacity;
+            case "username"         : return this.username;
+            case "password"         : return this.password;
+            case "loginButton"      : return this.loginButton;
+            case "addBtn"           : return this.addBtn;
+            case "deleteBtn"        : return this.deleteBtn;
+            case "actionDeleteBtn"  : return this.actionDeleteBtn;
+            case "searchBtn"        : return this.searchBtn;
+            case "saveBtn"          : return this.saveBtn;
+            case "nameInput"        : return this.nameInput;
+            case "codeInput"        : return this.codeInput;
+            case "searchNameInput"  : return this.searchNameInput;
+            case "searchCodeInput"  : return this.searchCodeInput;
+            case "searchShortName"  : return this.searchShortNameInput;
+            case "successMsg"       : return this.successMsg;
+            case "ShortName"        : return this.ShortName;
+            case "alreadyExistMsg"  : return this.alreadyExistMsg;
+            case "school_Capacity"  : return this.schoolCapacity;
             case "school_shortName" : return this.schoolShortName;
-            case "edit_saveButton" : return this.editSaveButton;
-            case "inputIban" : return this.inputIban;
-            case "IntegrationCodeInput" :return this.IntegrationCodeInput;
-            case "currency" : return this.currency;
-            case "currency1" : return this.currency1;
-            case "orderInput": return this.orderInput;
-            case "lastDeleteBtn": return this.lastDelBtn;
-            case "stage_input" :return this.stage_input;
-            case "stageList" :return this.stageList;
-            case "namefield" :return this.namefields;
-            default: return null;
+            case "edit_saveButton"  : return this.editSaveButton;
+            case "inputIban"        : return this.inputIban;
+            case "intCodeInput"     : return this.IntegrationCodeInput;
+            case "currency"         : return this.currency;
+            case "currency1"        : return this.currency1;
+            case "orderInput"       : return this.orderInput;
+            case "lastDeleteBtn"    : return this.lastDelBtn;
+            case "stage_input"      : return this.stage_input;
+            case "stageList"        : return this.stageList;
+            case "namefield"        : return this.namefields;
+            default                 : return null;
         }
     }
 }

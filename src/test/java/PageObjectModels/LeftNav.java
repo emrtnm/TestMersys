@@ -54,21 +54,21 @@ public class LeftNav {
 
     public WebElement getWebElement(String strElement){
         switch (strElement){
-            case "setup" : return this.setup;
-            case "humanResources" : return this.humanResources;
-            case "dropSetup" : return this.dropSetup;
-            case "education" : return this.education;
-            case "positions" : return this.positions;
-            case "attestations" : return this.attestations;
-            case "parameters" : return this.parameters;
-            case "schoolSetup" : return this.schoolSetup;
-            case "schoolSetup_Locations" : return this.schoolSetup_Locations;
-            case "schoolSetup_Departments" : return this.schoolSetup_Departments;
-            case "bank_Accounts" : return  this.bank_Accounts;
-            case "gradeLevels" : return  this.gradeLevels;
-            case "documentType" : return  this.document_types;
-            case "fields" : return  this.fields;
-            default: return null;
+            case "setup"                    : return this.setup;
+            case "humanResources"           : return this.humanResources;
+            case "dropSetup"                : return this.dropSetup;
+            case "education"                : return this.education;
+            case "positions"                : return this.positions;
+            case "attestations"             : return this.attestations;
+            case "parameters"               : return this.parameters;
+            case "schoolSetup"              : return this.schoolSetup;
+            case "schoolSetup_Locations"    : return this.schoolSetup_Locations;
+            case "schoolSetup_Departments"  : return this.schoolSetup_Departments;
+            case "bank_Accounts"            : return  this.bank_Accounts;
+            case "gradeLevels"              : return  this.gradeLevels;
+            case "documentType"             : return  this.document_types;
+            case "fields"                   : return  this.fields;
+            default                         : return null;
         }
     }
 }

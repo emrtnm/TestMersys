@@ -1,4 +1,4 @@
-Feature: Human Resources feature
+Feature: Human Resources Functionality
 
   Background:
     Given Enter username and password
@@ -28,14 +28,13 @@ Feature: Human Resources feature
     And User sends the keys into the DialogBox
       | searchNameInput      | <name>      |
 
-    And Click on the element in the DialogContent
-      | searchBtn |
+    And Click on the search button
 
     And Click on the edit button in the DialogContent
 
     And User sends the keys into the DialogBox
       | nameInput | <editName>      |
-      | ShortName | <editshortName> |
+      | ShortName | <editShortName> |
 
     And Click on the element in the DialogContent
       | saveBtn |
@@ -45,10 +44,7 @@ Feature: Human Resources feature
     And User sends the keys into the DialogBox
       | searchNameInput      | <editName>      |
 
-    And Click on the element in the DialogContent
-      | searchBtn |
-
-    And Wait 1500 sn
+    And Click on the search button
 
     And Click on the element in the DialogContent for deleting
       | deleteBtn       |
@@ -57,5 +53,5 @@ Feature: Human Resources feature
     Then Success message should be displayed
 
     Examples:
-      | name   | shortName | editName  | editshortName |
+      | name   | shortName | editName  | editShortName |
       | Mentor | MN        | Mentoring | MNT           |

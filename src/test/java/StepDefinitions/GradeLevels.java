@@ -14,7 +14,13 @@ public class GradeLevels {
     }
 
     @And("Click on the last edit button")
-    public void clickOnTheLastEditButton() {
+    public void clickOnTheLastEditButton() throws InterruptedException {
+        Thread.sleep(500);
         Events.click(content.lastEditBtn);
+    }
+
+    @And("Enter shortname {string} for update")
+    public void enterShortnameForUpdate(String shortname) {
+        Events.sendKeys(content.ShortName, shortname);
     }
 }
