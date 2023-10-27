@@ -5,7 +5,7 @@ Feature: Document Types Management Functionality
     And I click login button
     When I should login successfully
 
-  @Smoke, @Regression
+  @Docs, @Regression
   Scenario Outline: Add position in Document Types
     Given Click on the elements in LefNav
       | setup         |

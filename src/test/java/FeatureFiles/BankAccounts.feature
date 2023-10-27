@@ -5,7 +5,7 @@ Feature: Creating a Bank Account
     And I click login button
     When I should login successfully
 
-    @Smoke,@Regression
+    @Smoke, @Regression @Parameters, @Finance, @Banking
     Scenario Outline: User adds, edits and deletes bank accounts data
 
       And Click on the element in the LeftNav

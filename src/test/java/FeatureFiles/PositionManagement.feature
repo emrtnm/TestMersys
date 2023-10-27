@@ -9,16 +9,15 @@ Feature: Human Resources Functionality
   Scenario Outline: User adds, edits and deletes data in the Position Management functionality
 
     And Click on the element in the LeftNav
-      | humanResources |
-      | dropSetup      |
-      | positions      |
+      | humanResources     |
+      | dropSetup          |
+      | positionCategories |
 
     And Click on the element in the DialogContent
       | addBtn |
 
     And User sends the keys into the DialogBox
       | nameInput | <name>      |
-      | ShortName | <shortName> |
 
     And Click on the element in the DialogContent
       | saveBtn |
@@ -34,7 +33,6 @@ Feature: Human Resources Functionality
 
     And User sends the keys into the DialogBox
       | nameInput | <editName>      |
-      | ShortName | <editShortName> |
 
     And Click on the element in the DialogContent
       | saveBtn |
@@ -53,5 +51,5 @@ Feature: Human Resources Functionality
     Then Success message should be displayed
 
     Examples:
-      | name   | shortName | editName  | editShortName |
-      | Mentor | MN        | Mentoring | MNT           |
+      | name   |  editName  |
+      | Mentor |  Mentoring |

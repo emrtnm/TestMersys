@@ -1,23 +1,23 @@
-Feature: Fields module
+Feature: Education Setup Functionality
 
   Background:
     Given Enter username and password
     And I click login button
     When I should login successfully
 
-  @Parameters, @Fields, @Smoke
-  Scenario Outline: Add position in Document Types
+  @HR, @Smoke, @Regression
+  Scenario Outline: : Human-Resources Positions
     Given Click on the elements in LefNav
-      | setup      |
-      | parameters |
-      | fields     |
+      | humanResources |
+      | humanSetup     |
+      | positions      |
 
     And Click on the elements in Dialog
       | addBtn |
 
-    And The admin user sending the departments information in Dialog
-      | nameInput | <name> |
-      | codeInput | <code> |
+    And The admin user sending the humanPositions information in Dialog
+      | nameInput | <name>      |
+      | ShortName | <shortName> |
 
     And Click on the save element in Dialog
       | saveBtn |
@@ -31,10 +31,10 @@ Feature: Fields module
 
     And Click on the edit button in the DialogContent
 
-    And User sends the keys into the DialogBox
+    And The admin user sending the humanPositions information in Dialog
       | nameInput | <editName> |
 
-    And Click on the element in the DialogContent
+    And Click on the save element in Dialog
       | saveBtn |
 
     Then Success message should be displayed
@@ -44,11 +44,11 @@ Feature: Fields module
 
     And Click on the search button
 
-    And Click on the element in the DialogContent for deleting
+    And Click on the element in Dialog for deleting
       | deleteBtn       |
       | actionDeleteBtn |
 
     Then Success message should be displayed
     Examples:
-      | name  | code   | editName |
-      | Zakir | 321    | Kaplan   |
+      | name    | shortName | editName      |
+      | Product | PO        | Product Owner |
