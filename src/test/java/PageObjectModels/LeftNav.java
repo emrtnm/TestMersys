@@ -52,6 +52,13 @@ public class LeftNav {
     @FindBy(xpath = "//span[text()='Fields']")
     public WebElement fields;
 
+    @FindBy(xpath = "//span[text()='Discounts']")
+    public WebElement discounts;
+
+    @FindBy(xpath = "//span[text()='Nationalities']")
+    public WebElement nationalities;
+
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "setup"                    : return this.setup;
@@ -68,6 +75,8 @@ public class LeftNav {
             case "gradeLevels"              : return  this.gradeLevels;
             case "documentType"             : return  this.document_types;
             case "fields"                   : return  this.fields;
+            case "discounts"                : return  this.discounts;
+            case "nationalities"            : return  this.nationalities;
             default                         : return null;
         }
     }
