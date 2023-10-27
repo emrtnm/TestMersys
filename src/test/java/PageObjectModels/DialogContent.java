@@ -117,6 +117,25 @@ public class DialogContent {
     @FindBy(xpath = "//ms-edit-button//button")
     public List<WebElement> editBtnList;
 
+    @FindBy(css = "ms-dialog-content input[data-placeholder='Description']")
+    public WebElement description;
+
+    @FindBy(css = "ms-dialog-content input[data-placeholder='Integration Code']")
+    public WebElement integration;
+
+    @FindBy(css = "ms-dialog-content input[data-placeholder='Priority']")
+    public WebElement priority;
+
+    @FindBy (xpath = "//ms-save-button[2]")
+    public WebElement saveClose;
+
+    @FindBy (css = "input[data-placeholder='Description']")
+    public WebElement searchDescInput;
+
+    @FindBy(css = "ms-dialog-content input[data-placeholder='Name']")
+    public WebElement countryName;
+
+
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "username"         : return this.username;
@@ -147,6 +166,12 @@ public class DialogContent {
             case "stage_input"      : return this.stage_input;
             case "stageList"        : return this.stageList;
             case "namefield"        : return this.namefields;
+            case "description"      : return this.description;
+            case "integration"      : return this.integration;
+            case "priority"         : return this.priority;
+            case "saveClose"        : return this.saveClose;
+            case "searchDescInput"  : return this.searchDescInput;
+            case "countryName"      : return this.countryName;
             default                 : return null;
         }
     }
