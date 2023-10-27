@@ -135,7 +135,6 @@ public class DialogContent {
     @FindBy(css = "ms-dialog-content input[data-placeholder='Name']")
     public WebElement countryName;
 
-
     public WebElement getWebElement(String strElement){
         switch (strElement){
             case "username"         : return this.username;
